@@ -1,109 +1,110 @@
-📈 RetailSense
-Predictive Decision Support for Retail Merchandising & Inventory Planning
-🧠 In One Sentence
+# 📈 RetailSense
+## Predictive Decision Support for Retail Merchandising & Inventory Planning
 
-RetailSense helps retail chains understand why stores perform differently and what operational changes will improve sales.
+---
 
-🚩 The Problem
+## 🧠 One-Line Summary
+RetailSense helps retail chains understand **why stores perform differently** and what operational changes will improve sales.
 
-Retail teams frequently face situations like:
+---
 
-Same product → different performance across outlets
+## 🚩 The Problem
 
-No clarity whether pricing, visibility, or location caused it
+Retail teams frequently encounter:
 
-Merchandising decisions based on intuition
-
-BI dashboards showing what happened but not what to change
+- The same product performing differently across outlets
+- No clarity whether pricing, visibility, or location caused it
+- Merchandising decisions based on intuition
+- BI dashboards showing *what happened* but not *what to change*
 
 Store managers don’t need more charts.
+
 They need answers to:
 
-“What should we change tomorrow morning in the store?”
+> **What should we change tomorrow morning in the store?**
 
-🎯 Product Goal
+---
+
+## 🎯 Product Goal
 
 Turn raw retail data into operational actions:
 
-Raw Data → Signals → Decision → Store Action
 
+RetailSense focuses on **decision support**, not analytics reporting.
 
-Instead of analytics reporting, RetailSense focuses on decision support.
+---
 
-🧩 What Decisions This Supports
+## 🧩 Supported Decisions
 
-Assortment planning
+- Assortment planning
+- Pricing adjustments
+- Shelf visibility optimization
+- Outlet-level stocking strategy
 
-Pricing adjustments
+---
 
-Shelf visibility optimization
+## 🏗 Product Principles
 
-Outlet-level stocking strategy
+| Principle | Why it matters |
+|--------|------|
+| Interpretability over complexity | Users must trust outputs |
+| Decisions, not dashboards | Output must trigger action |
+| Robust across store types | Works for all outlet categories |
+| Assistive intelligence | Supports planners, doesn’t replace them |
 
-🏗 Product Principles
-Principle	Why it matters
-Interpretability over complexity	Users must trust outputs
-Decisions, not dashboards	Output must trigger action
-Robust across store types	Works for all outlet categories
-Assistive intelligence	Supports planners, doesn’t replace them
-⚙️ System Workflow
-Retail Data
-   ↓
-Feature Structuring
-   ↓
-Prediction Layer
-   ↓
-Signal Extraction
-   ↓
-Decision Layer
-   ↓
-Operational Recommendation
+---
+
+## ⚙️ System Workflow
 
 
 The system intentionally separates:
 
-Prediction ≠ Recommendation
+> **Prediction ≠ Recommendation**
 
-🔍 Key Insights Observed
+---
 
-Medium stores can outperform large stores in total sales
+## 🔍 Key Insights Observed
 
-Item visibility strongly impacts outlet sales
+- Medium stores can outperform large stores in total sales
+- Item visibility strongly impacts outlet sales
+- Category mix affects performance more than pricing alone
+- Outlet characteristics influence outcomes as much as product attributes
 
-Category mix affects performance more than pricing alone
+These explain why universal pricing or stocking strategies often fail.
 
-Outlet characteristics influence outcomes as much as product attributes
+---
 
-This explains why universal pricing or stocking strategies fail.
+## 🧪 What This Case Study Demonstrates
 
-🧪 What This Case Study Demonstrates
+This is not a machine learning project.  
+It demonstrates product thinking:
 
-This is not a machine learning project — it is a product thinking exercise showing:
+- framing a data problem into an operational workflow
+- converting predictions into user decisions
+- designing for trust & interpretability
+- enabling real-world actionability
 
-framing a data problem into an operational workflow
+---
 
-converting predictions into user decisions
+## 📂 Repository Guide
 
-designing for trust & interpretability
+| File | Purpose |
+|----|----|
+| `product-decisions.md` | Product reasoning & tradeoffs |
+| `notebook.ipynb` | Exploration & validation |
+| `README.md` | Product overview |
 
-building confidence in system recommendations
+👉 Start with **product-decisions.md**
 
-📂 Repository Guide
-File	Purpose
-product-decisions.md	Product reasoning & tradeoffs
-notebook.ipynb	Exploration & validation
-README.md	Product overview
+---
 
-➡️ Start with product-decisions.md
+## 🚀 If Built As A Real Product
 
-🚀 If Built As A Real Product
+Planned next steps:
 
-Next iterations would include:
+- Store recommendation UI
+- Scenario simulation (“If visibility increases?”)
+- Confidence bands for planners
+- Inventory system integration
 
-Store recommendation UI
-
-Scenario simulation (“If visibility increases?”)
-
-Confidence bands for planners
-
-Inventory system integration
+---
