@@ -67,9 +67,6 @@ These explain why universal pricing or stocking strategies often fail.
 
 ## 🧪 What This Case Study Demonstrates
 
-This is not a machine learning project.  
-It demonstrates product thinking:
-
 - framing a data problem into an operational workflow
 - converting predictions into user decisions
 - designing for trust & interpretability
