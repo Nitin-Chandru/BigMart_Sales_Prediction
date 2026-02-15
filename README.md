@@ -54,15 +54,6 @@ RetailSense focuses on **decision support**, not analytics reporting.
 
 ---
 
-## ⚙️ System Workflow
-
-
-The system intentionally separates:
-
-> **Prediction ≠ Recommendation**
-
----
-
 ## 🔍 Key Insights Observed
 
 - Medium stores can outperform large stores in total sales
