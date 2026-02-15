@@ -1,96 +1,96 @@
 # Product Decisions
 
-This project started as a sales prediction task.
+This project began as a sales prediction exercise.
 
-While working through the dataset, the limitation became clear — predicting a number does not help a store manager decide what to change in the store.
+The stated objective was to estimate future sales for each product at each store location.  
+But while working through the data, a practical issue appeared — store teams don’t act on a prediction number itself.
 
-Stores operate under constraints:
-limited shelf space, limited promotions, limited inventory.
+They act on planning questions:
+- How much inventory should we allocate?
+- Which items should we prioritise per store?
+- Which factors actually influence performance?
 
-So the goal shifted from forecasting sales to supporting merchandising decisions.
+So the goal shifted from predicting sales to supporting planning decisions using the prediction.
 
 ---
 
 ## What problem does this actually solve?
 
 The original question:
-> How much will a product sell?
+> What will the sales value be?
 
-The practical question:
-> What should the store do differently?
+The operational question:
+> What should we prepare for?
 
-A prediction alone does not tell whether to:
-- increase stock
-- change placement
-- promote the item
-- replace the product
-
-The product therefore focuses on explaining performance, not only estimating it.
+A forecast only becomes useful when it changes stocking or assortment behaviour.  
+The product therefore focuses on understanding *drivers of demand* alongside estimating it.
 
 ---
 
 ## Who would use this?
 
-Store managers and merchandising teams.
+Store planners and category managers.
 
 Their workflow:
-1. Look at product performance
-2. Compare across stores or categories
-3. Decide an action
+1. Estimate demand for an item
+2. Understand why demand differs across stores
+3. Adjust stocking decisions
 
-They need guidance, not just accuracy.
-
----
-
-## Why not optimise purely for prediction accuracy?
-
-A highly accurate model still leaves decisions unclear.  
-Two products can have similar predicted sales but require opposite actions.
-
-Instead, the system highlights performance drivers:
-- visibility
-- store type
-- pricing sensitivity
-- category behaviour
-
-This allows human judgement.
+They don’t need model internals — they need confidence in planning.
 
 ---
 
-## Why focus on drivers instead of rankings?
+## Why not optimise only for model accuracy?
 
-Ranking products only answers:
-> which items perform better
+A slightly better prediction does not necessarily improve decisions.  
+Planning improves when uncertainty and influencing factors are visible.
 
-Understanding drivers answers:
-> what can be improved
+So the system highlights relationships such as:
+- store size and demand capacity
+- product visibility and sales performance
+- category behaviour across locations
 
-This turns the tool from reporting into decision support.
+Accuracy matters, but explainability matters more for adoption.
+
+---
+
+## Why include product and store attributes?
+
+A single predicted number cannot explain variation between stores.
+
+By connecting predictions with attributes, users can reason about:
+- whether demand is transferable
+- whether performance depends on store conditions
+- whether the issue is supply or placement
+
+This turns forecasting into planning support.
 
 ---
 
 ## What would ship first?
 
 First version:
-- explain product performance
-- compare stores
-- identify improvement opportunities
+- estimate product demand per store
+- show main influencing factors
+- allow comparison across stores
 
-No automatic stocking recommendations yet.
+No automatic ordering recommendations yet.
 
 ---
 
 ## What would come later?
 
 Later versions could:
-- suggest inventory levels
-- recommend placement changes
-- simulate promotion impact
+- suggest order quantities
+- highlight stocking risks
+- simulate allocation changes
 
-But only after teams understand why products behave differently.
+But only after users trust the forecast behaviour.
 
 ---
 
 ## Guiding idea
 
-Retail decisions are constrained decisions. And hence, before automating stocking, teams must understand what influences demand.
+A forecast is useful only when it informs preparation.
+
+The goal is not predicting sales — the goal is reducing planning uncertainty.
