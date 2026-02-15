@@ -1,110 +1,159 @@
-# 🛒 Retail Demand Planning Assistant
-### Using sales forecasts to support stocking decisions
+📈 RetailSense — Store-Level Sales Intelligence Platform
 
-Forecasting sales is only useful if it changes what a store prepares for.
+Predictive decision support for retail merchandising & inventory planning
 
-This project explores how product and store data can help retail teams plan inventory and assortment decisions with more confidence.
+What this is
 
----
+RetailSense is a product exploration case study for a decision-support platform that helps retail chains understand what drives sales at a store level and make operational decisions such as:
 
-## The Problem
+assortment planning
 
-Retail stores must decide how much of each product to stock before knowing actual demand.
+pricing adjustments
 
-Teams often rely on past averages or intuition, which leads to:
-- overstocking slow items
-- stockouts of popular items
-- inconsistent performance across stores
+shelf visibility optimization
 
-A prediction number alone does not solve this —  
-teams need to understand *why demand differs*.
+outlet-level stocking strategy
 
----
+The goal was not to build a “model”, but to design a usable decision system:
 
-## Goal
+turn raw retail data → interpretable signals → operational action
 
-Build a system that helps planners:
+This repository demonstrates the product thinking, decision tradeoffs, and validation approach behind that system.
 
-1. Estimate demand for each product per store
-2. Understand the factors influencing that demand
-3. Reduce uncertainty in stocking decisions
+The Problem
 
-The focus is planning support, not model complexity.
+Retail chains often have:
 
----
+the same product performing differently across outlets
 
-## Approach
+no clear understanding of whether pricing, location, or visibility is responsible
 
-### 1. Estimate demand
+merchandising decisions made by heuristics instead of evidence
 
-Historical sales data was used to predict expected item sales for each store.
+Existing analytics tools answer what happened.
 
-The prediction acts as a baseline expectation — not a final decision.
+Retail operators need to know:
 
----
+“What should we change tomorrow morning in the store?”
 
-### 2. Connect predictions to store and product attributes
+The challenge:
+Sales outcomes are influenced by multiple interacting factors:
 
-Instead of treating predictions as isolated outputs, the system relates them to:
+store type & size
 
-| Factor | Planning meaning |
-|------|------|
-| Store size | capacity to sell volume |
-| Product visibility | placement effectiveness |
-| Category type | purchase frequency |
-| Pricing | sensitivity to demand |
+location tier
 
-This makes forecasts explainable.
+item visibility
 
----
+pricing band
 
-### 3. Support planning decisions
+product category
 
-The output allows planners to reason about:
+shelf exposure
 
-- whether low sales indicate low demand or poor placement
-- whether demand differences are store-specific
-- which items need stocking adjustments
+Raw BI dashboards fail because they:
 
----
+show correlations but not decision confidence
 
-## Example decisions enabled
+don’t translate into actions
 
-| Situation | Possible action |
-|------|------|
-| High predicted demand in large stores | allocate more inventory |
-| Low sales but high visibility impact | reposition product |
-| Store-specific demand variation | customise assortment |
-| Consistently low predicted demand | reduce stock or replace item |
+overwhelm store managers
 
----
+Product Goal
 
-## What this demonstrates
+Design a system that provides:
 
-Typical ML projects answer:
+Reliable store-level sales predictions
 
-> What will sales be?
+Actionable merchandising signals
 
-This project answers:
+Operational recommendations understandable by non-analysts
 
-> How should a store prepare?
+Product Principles
 
-The forecast becomes a decision aid, not just a metric.
+1. Interpretability over model complexity
+Predictions must explain why, not just output a number.
 
----
+2. Decisions, not dashboards
+Each output should suggest a concrete store action.
 
-## How to explore
+3. Robustness across store types
+System must generalize across different outlet categories.
 
-Review the notebook to see how predictions relate to product and store attributes.
+4. Assistive intelligence, not automation
+The tool supports planners — it does not replace them.
 
-Focus on understanding drivers rather than model accuracy.
+System Workflow
+Retail Data → Cleaning & Feature Structuring → Predictive Modeling
+→ Signal Extraction → Decision Layer → Operational Recommendation
 
----
 
-## Repository Contents
+The project intentionally separates:
 
-- notebook — demand estimation and feature exploration
-- data — product and store attributes
-- documentation — reasoning behind planning decisions
+prediction
 
----
+interpretation
+
+recommendation
+
+This reflects how real products are built.
+
+Key Insights Observed
+
+The system surfaced non-obvious retail behavior patterns:
+
+Medium stores outperformed large stores in total sales
+
+Item visibility had a strong influence on outlet sales
+
+Category mix affected store performance more than pricing alone
+
+Outlet characteristics were as important as product attributes
+
+These insights demonstrate why store-agnostic pricing or stocking strategies often fail.
+
+What This Project Demonstrates (PM Perspective)
+
+This repository focuses on product decisions, not modeling tricks.
+
+It shows how to:
+
+frame a data problem into an operational workflow
+
+convert predictions into user-consumable outputs
+
+prioritize interpretability over theoretical accuracy
+
+design outputs for business operators, not analysts
+
+build confidence in system recommendations
+
+Repository Guide
+File	Purpose
+product-decisions.md	Key product and design tradeoffs
+notebook.ipynb	Data exploration & prediction validation
+README.md	Product overview (this document)
+
+Start with product-decisions.md to understand the reasoning behind the system design.
+
+What I Would Build Next
+
+If taken forward as a real product:
+
+store recommendation UI
+
+simulation mode (“If I increase visibility, what happens?”)
+
+confidence bands for planners
+
+integration with inventory systems
+
+Why This Exists
+
+Many analytics projects stop at prediction accuracy.
+
+Real products succeed only when users trust and act on outputs.
+
+This case study explores the missing layer between:
+
+model performance → human decision making
